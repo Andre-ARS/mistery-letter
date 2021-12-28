@@ -10,11 +10,13 @@ function letterGenerator() {
     let splitedText = text.value.split(' ');
     
     for (let i = 0; i < splitedText.length; i += 1) {
-       let word = document.createElement('span');
-
-       word.innerText = splitedText[i];
-       letter.appendChild(word);
-    }
+        let word = document.createElement('span');
+        
+        word.innerText = splitedText[i];
+        letter.appendChild(word);
+    }  
+    
+    textCheck();
 }
 
 function letterCleaner() {
@@ -27,3 +29,15 @@ function letterCleaner() {
 
 letterCreator.addEventListener('click', letterGenerator);
 // essa é a minha carta !!!
+
+// Requisito 5
+
+// função inspirada no código do [André Sousa]
+function textCheck() {
+    if (letter.innerText === '' || text.value === null) {
+        let word = document.createElement('span');
+        word.innerText = "Por favor, digite o conteúdo da carta.";
+        letter.appendChild(word);
+    } 
+
+}
