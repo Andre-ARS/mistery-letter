@@ -22,6 +22,7 @@ function letterGenerator() {
     
     textCheck();
     classAttributor();
+    document.getElementById('carta-contador').innerText = 'N˚ de Palavras: ' + letter.childElementCount;
 }
 
 function letterCleaner() {
@@ -39,9 +40,10 @@ letterCreator.addEventListener('click', letterGenerator);
 
 // função inspirada no código do [André Sousa]
 function textCheck() {
-    letter.children[0].outerHTML = ''
-
+    
     if (letter.innerText === '' || text.value === null) {
+        letter.children[0].outerHTML = ''
+        
         let word = document.createElement('span');
         word.innerText = "Por favor, digite o conteúdo da carta.";
         letter.appendChild(word);
