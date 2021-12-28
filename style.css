@@ -39,3 +39,8 @@
     font-size: 40px;
     padding: 15px;
 }
+
+/* Rotação */
+.rotateleft {
+    transform: rotate(-5deg);
+}
