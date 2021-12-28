@@ -22,7 +22,7 @@ function letterGenerator() {
     
     textCheck();
     classAttributor();
-    document.getElementById('carta-contador').innerText = 'N˚ de Palavras: ' + letter.childElementCount;
+    document.getElementById('carta-contador').innerText = letter.childElementCount;
 }
 
 function letterCleaner() {
@@ -43,7 +43,7 @@ function textCheck() {
     
     if (letter.innerText === '' || text.value === null) {
         letter.children[0].outerHTML = ''
-        
+
         let word = document.createElement('span');
         word.innerText = "Por favor, digite o conteúdo da carta.";
         letter.appendChild(word);
