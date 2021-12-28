@@ -5,6 +5,7 @@ const styleClass = ['newspaper', 'magazine1', 'magazine2'];
 const sizeClass = ['medium', 'big', 'reallybig'];
 const rotationClass = ['rotateleft', 'rotateright'];
 const tiltClass = ['skewleft', 'skewright'];
+let child = ''
 
 // Requisito 3
 function letterGenerator() {
@@ -20,7 +21,7 @@ function letterGenerator() {
     }  
     
     textCheck();
-    classAttribuiter();
+    classAttributor();
 }
 
 function letterCleaner() {
@@ -38,6 +39,8 @@ letterCreator.addEventListener('click', letterGenerator);
 
 // função inspirada no código do [André Sousa]
 function textCheck() {
+    letter.children[0].outerHTML = ''
+
     if (letter.innerText === '' || text.value === null) {
         let word = document.createElement('span');
         word.innerText = "Por favor, digite o conteúdo da carta.";
@@ -45,13 +48,24 @@ function textCheck() {
     } 
 }
 
-// Requisito 6
+// Requisito 16
 function randomNum(maxNum) {
     return Math.floor(Math.random() * maxNum);
 }
 
-function classAttribuiter() {
+function classAttributor() {
     for (let index = 0; index < letter.childElementCount; index += 1) {
         letter.children[index].classList.add(styleClass[randomNum(styleClass.length)], sizeClass[randomNum(sizeClass.length)], rotationClass[randomNum(rotationClass.length)], tiltClass[randomNum(tiltClass.length)]);
+    }    
+}
+
+// Requisito 17
+function classChanger(event) {    
+    if (event.target.tagName === 'SPAN') {
+        event.target.className = ''
+    
+        event.target.classList.add(styleClass[randomNum(styleClass.length)], sizeClass[randomNum(sizeClass.length)], rotationClass[randomNum(rotationClass.length)], tiltClass[randomNum(tiltClass.length)]);
     }
 }
+
+letter.addEventListener('click', classChanger)

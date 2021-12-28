@@ -2,6 +2,11 @@
     margin: 0;
 }
 
+#carta-gerada span {
+    display: inline-block;
+    margin-right: 20px;
+}
+
 /* Estilo */
 .newspaper {
     background-color: antiquewhite;
@@ -56,4 +61,8 @@
 
 .skewright {
   transform: skewX(-10deg);
+}
+
+#input {
+    margin-bottom: 50px;
 }
