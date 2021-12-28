@@ -1,1 +1,9 @@
+* {
+    margin: 0;
+}
 
+.newspaper {
+    border-color: antiquewhite;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
