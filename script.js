@@ -5,13 +5,23 @@ const letterCreator = document.getElementById('criar-carta')
 // Requisito 3
 
 function letterGenerator() {
+    letterCleaner()
+   
     let splitedText = text.value.split(' ');
     
     for (let i = 0; i < splitedText.length; i += 1) {
        let word = document.createElement('span');
 
-       word.innerText = splitedText[i];
+       word.innerText = splitedText[i] + ' ';
        letter.appendChild(word)
+    }
+}
+
+function letterCleaner() {
+    let child = letter.children;
+
+    while (child[0]) {
+        child[0].outerHTML = ''
     }
 }
 
