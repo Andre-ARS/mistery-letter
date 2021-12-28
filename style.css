@@ -2,6 +2,7 @@
     margin: 0;
 }
 
+/* Estilo */
 .newspaper {
     background-color: antiquewhite;
     font-family: 'Times New Roman', Times, serif;
@@ -21,4 +22,10 @@
     color: fuchsia;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 900;
+}
+
+/* Tamanho */
+.medium {
+    font-size: 20px;
+    padding: 8px;
 }
