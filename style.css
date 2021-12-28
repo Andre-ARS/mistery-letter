@@ -48,3 +48,8 @@
 .rotateright {
     transform: rotate(5deg);
 }
+
+/* Inclinação */
+.skewleft {
+    transform: skewX(10deg);
+}
