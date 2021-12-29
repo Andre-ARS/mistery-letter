@@ -9,12 +9,14 @@
 </head>
 <body>
     <header id="input">
-        <input type="text" id='carta-texto' value="">
+        <input type="text" id='carta-texto' value="" placeholder="Escreva seu texto ">
         <button type="button" id="criar-carta">Criar Carta</button>
+        <p id="carta-contador" label="Contador de Palavras" ></p>
     </header>
     <main>
-        <p id="carta-contador">
-        <p id="carta-gerada"></p>
+        <section class="letter">
+            <p id="carta-gerada"></p>
+        </section>    
     </main>   
     <script src="script.js"></script>
 </body>

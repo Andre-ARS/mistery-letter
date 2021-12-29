@@ -20,9 +20,9 @@ function letterGenerator() {
         letter.appendChild(word);
     }  
     
+    document.getElementById('carta-contador').innerText = letter.childElementCount;
     textCheck();
     classAttributor();
-    document.getElementById('carta-contador').innerText = letter.childElementCount;
 }
 
 function letterCleaner() {
@@ -42,7 +42,8 @@ letterCreator.addEventListener('click', letterGenerator);
 function textCheck() {
     
     if (letter.innerText === '' || text.value === null) {
-        letter.children[0].outerHTML = ''
+        letter.children[0].outerHTML = '';
+        document.getElementById('carta-contador').innerText = '';
 
         let word = document.createElement('span');
         word.innerText = "Por favor, digite o conteúdo da carta.";
